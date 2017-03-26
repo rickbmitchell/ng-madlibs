@@ -19,12 +19,9 @@ angular.module('myApp.libs', ['ngRoute'])
 	    $location.hash(old);
    };
 
-   // 	$scope.scrollTo = function(id) {
-   // 		var old = $location.hash();
-   //      $location.hash('form-top');
-   //      $anchorScroll();
-   //      $location.hash(old);
-   // }
+    $scope.scroll = function () {
+      $anchorScroll();
+    };
 
 	$scope.addLib = function(){
 

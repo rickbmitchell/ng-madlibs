@@ -1,19 +1,39 @@
 <div class="row" ng-controller="LibsCtrl">
-	<div class="col-md-8" id="form-top">
+	<div class="col-md-8" id="form-top" autoscroll="true">
 		<h3>Create Lib</h3>
-	
+
 	<form ng-submit="addLib">
 		  <div class="form-group">
-		    <label>Adverb</label>
-		    <input type="text" class="form-control" ng-model="adverb_1" placeholder="Adverb">
+		    <label>Place</label>
+		    <input type="text" class="form-control" ng-model="field_1" placeholder="Place">
 		  </div>
 		  <div class="form-group">
 		    <label>Noun</label>
-		    <input type="email" class="form-control" ng-model="noun_1" placeholder="Noun">
+		    <input type="text" class="form-control" ng-model="field_2" placeholder="Noun">
 		  </div>
 		  <div class="form-group">
-		    <label>Positive Adjective</label>
-		    <input type="text" class="form-control" ng-model="pos_adj_1" placeholder="Positive Adjective">
+		    <label>Body Part</label>
+		    <input type="text" class="form-control" ng-model="field_3" placeholder="Body Part">
+		  </div>
+		 	<div class="form-group">
+		    <label>Famous War or Battle</label>
+		    <input type="text" class="form-control" ng-model="field_4" placeholder="Famous War or Battle">
+		  </div>
+		  <div class="form-group">
+		    <label>Slang Term</label>
+		    <input type="text" class="form-control" ng-model="field_5" placeholder="Slang Term">
+		  </div>
+		  <div class="form-group">
+		    <label>Adjective</label>
+		    <input type="text" class="form-control" ng-model="field_6" placeholder="Adjective">
+		  </div>
+		  <div class="form-group">
+		    <label>Place</label>
+		    <input type="text" class="form-control" ng-model="field_7" placeholder="Place">
+		  </div>
+		  <div class="form-group">
+		    <label>Verb</label>
+		    <input type="text" class="form-control" ng-model="field_8" placeholder="Verb">
 		  </div>
 		  <button type="submit" class="btn btn-default" ng-click="scrollTo('answer-bottom')">Submit</button>
 	</form>
@@ -24,11 +44,11 @@
 		<div class="col-md-10">
 			<div id="answer">
 
-			<p>What a great decision! With <span ng-hide="showInputs">{{adverb_1}}</span>
+			<p>You cannot be president of the <span class="underline" ng-hide="showInputs">{{field_1}}</span> if you don't have <span class="underline" ng-hide="showInputs">{{field_2}}</span>. Remember Lincoln, going to his <span class="underline" ng-hide="showInputs">{{field_3}}</span> in times of trial and the <span class="underline" ng-hide="showInputs">{{field_4}}</span> and all that <span class="underline" ng-hide="showInputs">{{field_5}}</span>. You can't be. And we are <span class="underline" ng-hide="showInputs">{{field_6}}</span>. So don't feel sorry for -- don't cry for me, <span class="underline" ng-hide="showInputs">{{field_7}}</span>. Message: I <span class="underline" ng-hide="showInputs">{{field_8}}</span>.
 			</p>
 			</div>
 			<div id="answer-bottom"></div>
-			<a href="#form-top" target="_self" class="btn btn-default edit-btn">Edit</a>
+			<button ng-click="scroll()" class="btn btn-default edit-btn">Edit</button>
 		</div>
 
 	</div>
